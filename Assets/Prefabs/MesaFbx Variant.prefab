@@ -170,6 +170,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ab6fe9d31499254e9fef4811549cef9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.275
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9ab6fe9d31499254e9fef4811549cef9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -215,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 739362f6cd1c8334786d2af589ca76c2, type: 2}
     - target: {fileID: 919132149155446097, guid: 9ab6fe9d31499254e9fef4811549cef9, type: 3}
       propertyPath: m_Name
-      value: MesaFbx
+      value: MesaFbx Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ab6fe9d31499254e9fef4811549cef9, type: 3}
