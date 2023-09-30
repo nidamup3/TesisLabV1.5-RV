@@ -3,7 +3,7 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 23
+  serializedVersion: 24
   productGUID: 7599a87859428a2448cdb8f3d654e4a0
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -553,7 +553,6 @@ PlayerSettings:
   switchReleaseVersion: 0
   switchDisplayVersion: 1.0.0
   switchStartupUserAccount: 0
-  switchTouchScreenUsage: 0
   switchSupportedLanguagesMask: 0
   switchLogoType: 0
   switchApplicationErrorCodeCategory: 
@@ -595,6 +594,7 @@ PlayerSettings:
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
   switchSupportedNpadCount: 8
+  switchEnableTouchScreen: 1
   switchSocketConfigEnabled: 0
   switchTcpInitialSendBufferSize: 32
   switchTcpInitialReceiveBufferSize: 64
@@ -709,27 +709,40 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: ULTIMATEXR_USE_OCULUS_SDK
-    EmbeddedLinux: ULTIMATEXR_USE_OCULUS_SDK
-    GameCoreScarlett: ULTIMATEXR_USE_OCULUS_SDK
-    GameCoreXboxOne: ULTIMATEXR_USE_OCULUS_SDK
-    LinuxHeadlessSimulation: ULTIMATEXR_USE_OCULUS_SDK
-    Lumin: ULTIMATEXR_USE_OCULUS_SDK
-    Nintendo Switch: ULTIMATEXR_USE_OCULUS_SDK
-    PS4: ULTIMATEXR_USE_OCULUS_SDK
-    PS5: ULTIMATEXR_USE_OCULUS_SDK
-    Stadia: ULTIMATEXR_USE_OCULUS_SDK
-    Standalone: ULTIMATEXR_USE_OCULUS_SDK
-    WebGL: ULTIMATEXR_USE_OCULUS_SDK
-    Windows Store Apps: ULTIMATEXR_USE_OCULUS_SDK
-    XboxOne: ULTIMATEXR_USE_OCULUS_SDK
-    iPhone: ULTIMATEXR_USE_OCULUS_SDK
-    tvOS: ULTIMATEXR_USE_OCULUS_SDK
+    Android: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    EmbeddedLinux: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    GameCoreScarlett: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    GameCoreXboxOne: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    LinuxHeadlessSimulation: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    Lumin: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    Nintendo Switch: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    PS4: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    PS5: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    Stadia: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    Standalone: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    WebGL: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    Windows Store Apps: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    XboxOne: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    iPhone: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
+    tvOS: ULTIMATEXR_USE_OCULUS_SDK;ULTIMATEXR_USE_WINDOWSMIXEDREALITY_SDK
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    EmbeddedLinux: 1
+    GameCoreScarlett: 1
+    GameCoreXboxOne: 1
+    Lumin: 1
+    Nintendo Switch: 1
+    PS4: 1
+    PS5: 1
+    Stadia: 1
+    WebGL: 1
+    Windows Store Apps: 1
+    XboxOne: 1
+    iPhone: 1
+    tvOS: 1
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
