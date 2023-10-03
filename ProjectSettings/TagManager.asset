@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weight50G
+  - Weight100G
+  - Weight150G
+  - Hand
   layers:
   - Default
   - TransparentFX
