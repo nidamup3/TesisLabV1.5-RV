@@ -5,9 +5,15 @@ using UnityEngine;
 public class ResetCarTrigger : MonoBehaviour
 {
     [SerializeField] private CarMovement carMovement;
+    [SerializeField] private TimeSecondsCar timeSecondsCar;
+
+    private string HANDTAG = "Hand";
 
     private void OnTriggerEnter(Collider other)
     {
-        carMovement.ResetCarPosition();
+        if (other.gameObject.tag == HANDTAG)
+        {
+            carMovement.ResetCarPosition();
+        }
     }
 }

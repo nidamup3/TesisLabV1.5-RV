@@ -8,6 +8,7 @@ TagManager:
   - Weight100G
   - Weight150G
   - Hand
+  - Car
   layers:
   - Default
   - TransparentFX

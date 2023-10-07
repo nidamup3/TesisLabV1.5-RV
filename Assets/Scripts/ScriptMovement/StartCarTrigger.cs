@@ -5,6 +5,7 @@ using UnityEngine;
 public class StartCarTrigger : MonoBehaviour
 {
     [SerializeField] private CarMovement carMovement;
+    [SerializeField] private TimeSecondsCar timeSecondsCar;
     private bool IsEnterStartCollider;
     private string HANDTAG = "Hand";
 
@@ -14,9 +15,12 @@ public class StartCarTrigger : MonoBehaviour
         {
             carMovement.MoveCar();
             IsEnterStartCollider = true;
+            timeSecondsCar.IniciarAccion();
             Debug.Log("Car Enter Trigger!!");
         }            
     }
 
     public bool GetIsEnterStartCollider() => IsEnterStartCollider;
+
+    public void SetIsEnterStartColliderFalse() => IsEnterStartCollider = false;
 }

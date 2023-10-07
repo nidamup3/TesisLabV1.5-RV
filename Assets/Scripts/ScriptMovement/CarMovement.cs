@@ -6,10 +6,12 @@ public class CarMovement : MonoBehaviour
 {
     [SerializeField] private WeightTriggerChanger weightTrigger;
     [SerializeField] private StartCarTrigger startCarTrigger;
+    [SerializeField] private StopCarTrigger stopCarTrigger;
+    [SerializeField] private Transform startTransform;
     private float moveSpeed = 1f;
-    private const string WEIGHT50 = "Weight50";
-    private const string WEIGHT100 = "Weight100";
-    private const string WEIGHT150 = "Weight150";
+    private const string WEIGHT50 = "Weight50G";
+    private const string WEIGHT100 = "Weight100G";
+    private const string WEIGHT150 = "Weight150G";
 
     private void GetSpeed()
     {
@@ -17,41 +19,38 @@ public class CarMovement : MonoBehaviour
             moveSpeed = 0;
 
         if (weightTrigger.GetWeight() == WEIGHT50)
-            moveSpeed = 1f;
+            moveSpeed = 0.203f;
 
         if (weightTrigger.GetWeight() == WEIGHT100)
-            moveSpeed = 2f;
+            moveSpeed = 0.2589f;
 
         if (weightTrigger.GetWeight() == WEIGHT150)
-            moveSpeed = 3f;
+            moveSpeed = 0.321f;
     }
 
     private void Update()
     {
+        
         MoveCar();
     }
 
     private void CarMovementM()
     {
         GetSpeed();
+        if (stopCarTrigger.GetIsCarStopped())
+            moveSpeed = 0;
 
         if (startCarTrigger.GetIsEnterStartCollider())
         {
-            if (transform.position.x >= -11)
-            {
-                Vector3 movement = new Vector3(-moveSpeed, 0f, 0f)  * Time.deltaTime;
-                transform.Translate(movement);
-            }
-
-            else
-            {
-                Vector3 movement = new Vector3(0f, 0f, 0f) * Time.deltaTime;
-                transform.Translate(movement);
-            }
+            Vector3 movement = new Vector3(-moveSpeed, 0f, 0f)  * Time.deltaTime;
+            transform.Translate(movement);
         }
     }
 
-    public void ResetCarPosition() => transform.position = new Vector3(2.17700005f, 0.458999991f, -1.08500004f);
+    public void ResetCarPosition()
+    { 
+        transform.position = startTransform.position;
+    }
 
     public void MoveCar() => CarMovementM();
 }
