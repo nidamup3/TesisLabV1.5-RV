@@ -8,6 +8,9 @@ public class CarMovement : MonoBehaviour
     [SerializeField] private StartCarTrigger startCarTrigger;
     [SerializeField] private StopCarTrigger stopCarTrigger;
     [SerializeField] private Transform startTransform;
+    [SerializeField] private float velocidadPesoUno;
+    [SerializeField] private float velocidadPesoDos;
+    [SerializeField] private float velocidadPesoTres;
     private float moveSpeed = 1f;
     private const string WEIGHT50 = "Weight50G";
     private const string WEIGHT100 = "Weight100G";
@@ -19,13 +22,13 @@ public class CarMovement : MonoBehaviour
             moveSpeed = 0;
 
         if (weightTrigger.GetWeight() == WEIGHT50)
-            moveSpeed = 0.203f;
+            moveSpeed = velocidadPesoUno;
 
         if (weightTrigger.GetWeight() == WEIGHT100)
-            moveSpeed = 0.2589f;
+            moveSpeed = velocidadPesoDos;
 
         if (weightTrigger.GetWeight() == WEIGHT150)
-            moveSpeed = 0.321f;
+            moveSpeed = velocidadPesoTres;
     }
 
     private void Update()

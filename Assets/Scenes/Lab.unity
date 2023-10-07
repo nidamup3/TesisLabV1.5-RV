@@ -5082,7 +5082,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -27297,6 +27297,9 @@ MonoBehaviour:
   startCarTrigger: {fileID: 407153856}
   stopCarTrigger: {fileID: 1551178378}
   startTransform: {fileID: 763469367}
+  velocidadPesoUno: 0.203
+  velocidadPesoDos: 0.2589
+  velocidadPesoTres: 0.321
 --- !u!54 &1209880200
 Rigidbody:
   m_ObjectHideFlags: 0

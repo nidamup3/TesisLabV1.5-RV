@@ -9,6 +9,4 @@ public class CarMovementAnimation : MonoBehaviour
     private const string WEIGHT50 = "Weight50";
     private const string WEIGHT100 = "Weight100";
     private const string WEIGHT150 = "Weight150";
-
-
 }
