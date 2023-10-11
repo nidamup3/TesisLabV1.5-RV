@@ -2,16 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScSoga : MonoBehaviour
+public class BloquearMovimiento : MonoBehaviour
 {
-    public Vector3 fuerzaPrueba;
-   
-    // Update is called once per frame
+    // Velocidad de movimiento en el eje X
+    public float velocidadMovimiento = 5f;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-            transform.GetChild(transform.childCount - 1).GetComponent<Rigidbody>().AddForce(fuerzaPrueba, ForceMode.Impulse);
-        if (Input.GetKeyDown(KeyCode.O))
-            transform.GetChild(transform.childCount / 2).GetComponent<Rigidbody>().AddForce(fuerzaPrueba, ForceMode.Impulse);
+        // Obtener la posición actual del objeto
+        Vector3 posicionActual = transform.position;
+
+        // Bloquear el movimiento en los ejes Y y Z
+        posicionActual.y = 0f;
+        posicionActual.z = 0f;
+
+        // Mover el objeto solo en el eje X
+        float movimientoX = Input.GetAxis("Horizontal");
+        posicionActual.x += movimientoX * velocidadMovimiento * Time.deltaTime;
+
+        // Aplicar la nueva posición al objeto
+        transform.position = posicionActual;
     }
 }
+
