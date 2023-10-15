@@ -8,6 +8,13 @@ public class TimeSecondsCar : MonoBehaviour
 {
     [SerializeField] private StartCarTrigger startCarTrigger;
     [SerializeField] private Text TimeString;
+    [SerializeField] private TableFiller tableFiller10;
+    [SerializeField] private TableFiller tableFiller20;
+    [SerializeField] private TableFiller tableFiller30;
+    [SerializeField] private WeightTriggerChanger weightTriggerChanger;
+    private const string WEIGHT50 = "Weight50G";
+    private const string WEIGHT100 = "Weight100G";
+    private const string WEIGHT150 = "Weight150G";
     private const string CARTAG = "Car";
     private bool accionIniciada = false;
     private float tiempoInicio;
@@ -50,7 +57,18 @@ public class TimeSecondsCar : MonoBehaviour
             float tiempoFinal = Time.time - tiempoInicio;
             Debug.Log("Tiempo total: " + tiempoFinal.ToString("F2") + " segundos");
             TimeString.text = $"Tiempo: {tiempoFinal.ToString("F2")} Segundos";
+            PutTime(tiempoFinal);
         }
+    }
+
+    private void PutTime(float time)
+    {
+        if (weightTriggerChanger.GetWeight() == WEIGHT50)
+            tableFiller10.SetFloatArray(time);
+        if (weightTriggerChanger.GetWeight() == WEIGHT100)
+            tableFiller20.SetFloatArray(time);
+        if (weightTriggerChanger.GetWeight() == WEIGHT150)
+            tableFiller30.SetFloatArray(time);
     }
 
     private void OnTriggerExit(Collider other)
