@@ -27271,6 +27271,7 @@ MonoBehaviour:
   tableFiller20: {fileID: 2017340021}
   tableFiller30: {fileID: 1501564823}
   weightTriggerChanger: {fileID: 2030871581}
+  censorPosition: {fileID: 0}
 --- !u!1001 &1152540732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51509,7 +51510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4105edd858b40840b352072e382cc26, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.85
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4105edd858b40840b352072e382cc26, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51760,7 +51761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4105edd858b40840b352072e382cc26, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.52
+      value: -10.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4105edd858b40840b352072e382cc26, type: 3}
       propertyPath: m_LocalRotation.w

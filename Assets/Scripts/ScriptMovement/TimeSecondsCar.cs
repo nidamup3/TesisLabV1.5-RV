@@ -15,6 +15,7 @@ public class TimeSecondsCar : MonoBehaviour
     private const string WEIGHT50 = "Weight50G";
     private const string WEIGHT100 = "Weight100G";
     private const string WEIGHT150 = "Weight150G";
+    [SerializeField] private Transform censorPosition;
     private const string CARTAG = "Car";
     private bool accionIniciada = false;
     private float tiempoInicio;

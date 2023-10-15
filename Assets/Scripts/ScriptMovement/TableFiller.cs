@@ -9,17 +9,13 @@ public class TableFiller : MonoBehaviour
 {
     [SerializeField] private WeightTriggerChanger weightTrigger;
     [SerializeField] private Text[] dataFillColumn;
-    private float[] floatValuesToPut = new float[5] { 0, 0, 0, 0, 0 };
-
-    private void Update()
-    {
-        
-    }
+    private float[] floatValuesToPut = new float[5];
+    int i = 0;
 
     public void SetFloatArray(float value)
     {
-        int filesInt = 5;
-        int i = 0;
+        int filesInt = 5;        
+        
         if (i < filesInt)
         {
             floatValuesToPut[i] = value;
@@ -27,7 +23,8 @@ public class TableFiller : MonoBehaviour
             Debug.Log($"Data To Fill {dataFillColumn[i].text} {floatValuesToPut[i]}");
             i++;
         }
-        else
+
+        if (i >= filesInt)
         {
             dataFillColumn[5].text = floatValuesToPut.Average().ToString("F3");
         }
