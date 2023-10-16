@@ -11,6 +11,8 @@ public class TimeSecondsCar : MonoBehaviour
     [SerializeField] private TableFiller tableFiller10;
     [SerializeField] private TableFiller tableFiller20;
     [SerializeField] private TableFiller tableFiller30;
+    [SerializeField] private TableFiller tableFiller40;
+    [SerializeField] private TableFiller tableFiller50;
     [SerializeField] private WeightTriggerChanger weightTriggerChanger;
     private const string WEIGHT50 = "Weight50G";
     private const string WEIGHT100 = "Weight100G";
@@ -64,12 +66,16 @@ public class TimeSecondsCar : MonoBehaviour
 
     private void PutTime(float time)
     {
-        if (weightTriggerChanger.GetWeight() == WEIGHT50)
+        if ((censorPosition.position.z <= -10.7f && censorPosition.position.z >= -10.9f) || censorPosition.position.z == -10.8f)
             tableFiller10.SetFloatArray(time);
-        if (weightTriggerChanger.GetWeight() == WEIGHT100)
+        if ((censorPosition.position.z <= -8.5f && censorPosition.position.z >= 8.7f) || censorPosition.position.z == -8.6f)
             tableFiller20.SetFloatArray(time);
-        if (weightTriggerChanger.GetWeight() == WEIGHT150)
+        if ((censorPosition.position.z <= -6.3f && censorPosition.position.z >= -10.5f) || censorPosition.position.z == -6.4f)
             tableFiller30.SetFloatArray(time);
+        if ((censorPosition.position.z <= -4.1f && censorPosition.position.z >= -4.3f) || censorPosition.position.z == -4.2f)
+            tableFiller40.SetFloatArray(time);
+        if ((censorPosition.position.z <= -1.9f && censorPosition.position.z >= -2.1f) || censorPosition.position.z == -2.0f)
+            tableFiller50.SetFloatArray(time);
     }
 
     private void OnTriggerExit(Collider other)
