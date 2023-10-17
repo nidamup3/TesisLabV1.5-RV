@@ -9,6 +9,7 @@ TagManager:
   - Weight150G
   - Hand
   - Car
+  - Censor
   layers:
   - Default
   - TransparentFX
