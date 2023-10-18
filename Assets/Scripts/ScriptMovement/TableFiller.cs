@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TableFiller : MonoBehaviour
 {
-    [SerializeField] private WeightTriggerChanger weightTrigger;
+    //[SerializeField] private WeightTriggerChanger weightTrigger;
     [SerializeField] private Text[] dataFillColumn;
     private float[] floatValuesToPut = new float[5];
     int i = 0;
