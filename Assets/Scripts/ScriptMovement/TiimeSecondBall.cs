@@ -23,6 +23,8 @@ public class TiimeSecondBall : MonoBehaviour
     private float tiempoInicio;
     private float tiempoTranscurrido;
     private bool triggerAlcanzado = false;
+    private float TiempoFinalGraphic;
+    private string DistanciaGrafica;
 
     void Update()
     {
@@ -60,6 +62,7 @@ public class TiimeSecondBall : MonoBehaviour
             float tiempoFinal = Time.time - tiempoInicio;
             Debug.Log("Tiempo total: " + tiempoFinal.ToString("F2") + " segundos");
             TimeString.text = $"Tiempo: {tiempoFinal.ToString("F2")} Segundos";
+            TiempoFinalGraphic = tiempoFinal;
             PutTime(tiempoFinal);
         }
     }
@@ -67,15 +70,30 @@ public class TiimeSecondBall : MonoBehaviour
     private void PutTime(float time)
     {
         if (checkWhereCensorIs10.GetIsHere())
+        {
+            DistanciaGrafica = "10";
             tableFiller10.SetFloatArray(time);
+        }
         if (checkWhereCensorIs20.GetIsHere())
+        {
+            DistanciaGrafica = "20";
             tableFiller20.SetFloatArray(time);
+        }
         if (checkWhereCensorIs30.GetIsHere())
+        {
+            DistanciaGrafica = "30";
             tableFiller30.SetFloatArray(time);
+        }
         if (checkWhereCensorIs40.GetIsHere())
+        {
+            DistanciaGrafica = "40";
             tableFiller40.SetFloatArray(time);
+        }
         if (checkWhereCensorIs50.GetIsHere())
+        {
+            DistanciaGrafica = "50";
             tableFiller50.SetFloatArray(time);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -86,4 +104,8 @@ public class TiimeSecondBall : MonoBehaviour
             triggerAlcanzado = false;
         }
     }
+
+    public float GetTiempoFinalGraphic() => TiempoFinalGraphic;
+
+    public string GetDistanciaGrafica() => DistanciaGrafica;
 }
