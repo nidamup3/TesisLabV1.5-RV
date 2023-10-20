@@ -24,7 +24,7 @@ public class TiimeSecondBall : MonoBehaviour
     private float tiempoTranscurrido;
     private bool triggerAlcanzado = false;
     private float TiempoFinalGraphic;
-    private string DistanciaGrafica;
+    private int DistanciaGrafica;
 
     void Update()
     {
@@ -71,27 +71,27 @@ public class TiimeSecondBall : MonoBehaviour
     {
         if (checkWhereCensorIs10.GetIsHere())
         {
-            DistanciaGrafica = "10";
+            DistanciaGrafica = 10;
             tableFiller10.SetFloatArray(time);
         }
         if (checkWhereCensorIs20.GetIsHere())
         {
-            DistanciaGrafica = "20";
+            DistanciaGrafica = 20;
             tableFiller20.SetFloatArray(time);
         }
         if (checkWhereCensorIs30.GetIsHere())
         {
-            DistanciaGrafica = "30";
+            DistanciaGrafica = 30;
             tableFiller30.SetFloatArray(time);
         }
         if (checkWhereCensorIs40.GetIsHere())
         {
-            DistanciaGrafica = "40";
+            DistanciaGrafica = 40;
             tableFiller40.SetFloatArray(time);
         }
         if (checkWhereCensorIs50.GetIsHere())
         {
-            DistanciaGrafica = "50";
+            DistanciaGrafica = 50;
             tableFiller50.SetFloatArray(time);
         }
     }
@@ -107,5 +107,5 @@ public class TiimeSecondBall : MonoBehaviour
 
     public float GetTiempoFinalGraphic() => TiempoFinalGraphic;
 
-    public string GetDistanciaGrafica() => DistanciaGrafica;
+    public int GetDistanciaGrafica() => DistanciaGrafica;
 }
