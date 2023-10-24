@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,10 @@ public class TableFiller : MonoBehaviour
         {
             dataFillColumn[5].text = floatValuesToPut.Average().ToString("F3");
         }
+    }
+
+    internal void SetFloatArray(float time, float min, float max)
+    {
+        throw new NotImplementedException();
     }
 }

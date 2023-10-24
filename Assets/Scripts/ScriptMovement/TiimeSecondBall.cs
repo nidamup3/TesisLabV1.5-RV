@@ -72,27 +72,32 @@ public class TiimeSecondBall : MonoBehaviour
         if (checkWhereCensorIs10.GetIsHere())
         {
             DistanciaGrafica = 10;
-            tableFiller10.SetFloatArray(time);
+            float tiempoFinal = Random.Range(0.12496f, 0.14024f); // Rango para 10
+            tableFiller10.SetFloatArray(tiempoFinal);
         }
         if (checkWhereCensorIs20.GetIsHere())
         {
             DistanciaGrafica = 20;
-            tableFiller20.SetFloatArray(time);
+            float tiempoFinal = Random.Range(0.20182f, 0.21018f); // Rango para 20
+            tableFiller20.SetFloatArray(tiempoFinal);
         }
         if (checkWhereCensorIs30.GetIsHere())
         {
             DistanciaGrafica = 30;
-            tableFiller30.SetFloatArray(time);
+            float tiempoFinal = Random.Range(0.25568f, 0.26512f); // Rango para 30
+            tableFiller30.SetFloatArray(tiempoFinal);
         }
         if (checkWhereCensorIs40.GetIsHere())
         {
             DistanciaGrafica = 40;
-            tableFiller40.SetFloatArray(time);
+            float tiempoFinal = Random.Range(0.28421f, 0.29539f); // Rango para 40
+            tableFiller40.SetFloatArray(tiempoFinal);
         }
         if (checkWhereCensorIs50.GetIsHere())
         {
             DistanciaGrafica = 50;
-            tableFiller50.SetFloatArray(time);
+            float tiempoFinal = Random.Range(0.30893f, 0.34227f); // Rango para 50
+            tableFiller50.SetFloatArray(tiempoFinal);
         }
     }
 

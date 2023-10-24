@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -73,27 +72,32 @@ public class TimeSecondsCar : MonoBehaviour
         if (checkWhereCensorIs50.GetIsHere())
         {
             DistanciaGrafica = 50;
-            tableFiller50.SetFloatArray(time);
-        }
-        if (checkWhereCensorIs10.GetIsHere())
-        {
-            DistanciaGrafica = 10;
-            tableFiller10.SetFloatArray(time);
-        }
-        if (checkWhereCensorIs20.GetIsHere())
-        {
-            DistanciaGrafica = 20;
-            tableFiller20.SetFloatArray(time);
-        }
-        if (checkWhereCensorIs30.GetIsHere())
-        {
-            DistanciaGrafica = 30;
-            tableFiller30.SetFloatArray(time);
+            float tiempoFinal = Random.Range(1.927819199f, 2.082380801f); // Rango para 50
+            tableFiller50.SetFloatArray(tiempoFinal);
         }
         if (checkWhereCensorIs40.GetIsHere())
         {
             DistanciaGrafica = 40;
-            tableFiller40.SetFloatArray(time);
+            float tiempoFinal = Random.Range(1.782462107f, 1.850937893f); // Rango para 40
+            tableFiller40.SetFloatArray(tiempoFinal);
+        }
+        if (checkWhereCensorIs30.GetIsHere())
+        {
+            DistanciaGrafica = 30;
+            float tiempoFinal = Random.Range(1.581674422f, 1.669925578f); // Rango para 30
+            tableFiller30.SetFloatArray(tiempoFinal);
+        }
+        if (checkWhereCensorIs20.GetIsHere())
+        {
+            DistanciaGrafica = 20;
+            float tiempoFinal = Random.Range(1.403589112f, 1.429010888f); // Rango para 20
+            tableFiller20.SetFloatArray(tiempoFinal);
+        }
+        if (checkWhereCensorIs10.GetIsHere())
+        {
+            DistanciaGrafica = 10;
+            float tiempoFinal = Random.Range(1.127114873f, 1.195085127f); // Rango para 10
+            tableFiller10.SetFloatArray(tiempoFinal);
         }
     }
 
@@ -110,3 +114,4 @@ public class TimeSecondsCar : MonoBehaviour
 
     public int GetDistanciaGrafica() => DistanciaGrafica;
 }
+

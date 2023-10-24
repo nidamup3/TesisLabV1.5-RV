@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace XCharts.Runtime
@@ -9,6 +10,8 @@ namespace XCharts.Runtime
     [HelpURL("https://xcharts-team.github.io/docs/configuration")]
     public class LineChart : BaseChart
     {
+        public object yAxis;
+
         protected override void DefaultChart()
         {
             EnsureChartComponent<GridCoord>();
@@ -21,6 +24,16 @@ namespace XCharts.Runtime
             {
                 AddXAxisData("x" + (i + 1));
             }
+        }
+
+        public void AddSerie(object line)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddData(float v1, float v2)
+        {
+            throw new NotImplementedException();
         }
     }
 }
