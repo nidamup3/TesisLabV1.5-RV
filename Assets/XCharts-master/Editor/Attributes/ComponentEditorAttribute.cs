@@ -13,4 +13,3 @@ namespace XCharts.Editor
         }
     }
 }
-// personaliza la grafica

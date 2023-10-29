@@ -312,7 +312,7 @@ namespace XCharts.Runtime
         /// <param name="serieIndex">the index of serie</param>
         /// <param name="multidimensionalData">the (x,y,z,...) data</param>
         /// <returns></returns>
-        public SerieData AddData(float v, int serieIndex, params double[] multidimensionalData)
+        public SerieData AddData(int serieIndex, params double[] multidimensionalData)
         {
             var serie = GetSerie(serieIndex);
             if (serie != null)

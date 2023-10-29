@@ -42,33 +42,21 @@ namespace XCharts.Example
             var yAxis = chart.EnsureChartComponent<YAxis>();
             xAxis.show = true;
             yAxis.show = true;
-            xAxis.type = Axis.AxisType.Value; // Cambiamos de 'Category' a 'Value'
+            xAxis.type = Axis.AxisType.Category;
             yAxis.type = Axis.AxisType.Value;
 
-            xAxis.splitNumber = 4; // Reducimos el número de divisiones
+            xAxis.splitNumber = 10;
             xAxis.boundaryGap = true;
 
             chart.RemoveData();
             chart.AddSerie<SimplifiedLine>();
             chart.AddSerie<SimplifiedLine>();
-
-            // Agregamos los valores requeridos al eje X y Y
-            chart.AddXAxisData("10");
-            chart.AddXAxisData("20");
-            chart.AddXAxisData("30");
-            chart.AddXAxisData("40");
-            chart.AddXAxisData("50");
-
-            chart.AddData(0, 0.131);
-            chart.AddData(1, 0.131);
-            chart.AddData(0, 0.207);
-            chart.AddData(1, 0.207);
-            chart.AddData(0, 0.261);
-            chart.AddData(1, 0.261);
-            chart.AddData(0, 0.291);
-            chart.AddData(1, 0.291);
-            chart.AddData(0, 0.323);
-            chart.AddData(1, 0.323);
+            for (int i = 0; i < 200; i++)
+            {
+                chart.AddXAxisData("x" + i);
+                chart.AddData(0, Random.Range(10, 20));
+                chart.AddData(1, Random.Range(10, 20));
+            }
         }
     }
 }

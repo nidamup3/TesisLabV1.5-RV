@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,10 +30,10 @@ public class TimeSecondsCar : MonoBehaviour
     void Update()
     {
         IniciarAccion();
-        // Verifica si la acción ha sido iniciada
+        // Verifica si la acci n ha sido iniciada
         if (accionIniciada && !triggerAlcanzado)
         {
-            // Calcula el tiempo transcurrido desde el inicio de la acción
+            // Calcula el tiempo transcurrido desde el inicio de la acci n
             tiempoTranscurrido = Time.time - tiempoInicio;
 
             // Muestra el tiempo en la consola
@@ -40,7 +41,7 @@ public class TimeSecondsCar : MonoBehaviour
         }
     }
 
-    // Método que inicia la acción
+    // M todo que inicia la acci n
     public void IniciarAccion()
     {
         if (!startCarTrigger.GetIsEnterStartCollider())
@@ -50,7 +51,7 @@ public class TimeSecondsCar : MonoBehaviour
         }
     }
 
-    // Método que se llama cuando se alcanza el trigger
+    // M todo que se llama cuando se alcanza el trigger
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == CARTAG)
@@ -58,7 +59,7 @@ public class TimeSecondsCar : MonoBehaviour
             // Registra que el trigger ha sido alcanzado
             triggerAlcanzado = true;
 
-            // Detiene la acción y muestra el tiempo final
+            // Detiene la acci n y muestra el tiempo final
             float tiempoFinal = Time.time - tiempoInicio;
             Debug.Log("Tiempo total: " + tiempoFinal.ToString("F2") + " segundos");
             TimeString.text = $"Tiempo: {tiempoFinal.ToString("F2")} Segundos";
@@ -72,32 +73,27 @@ public class TimeSecondsCar : MonoBehaviour
         if (checkWhereCensorIs50.GetIsHere())
         {
             DistanciaGrafica = 50;
-            float tiempoFinal = Random.Range(1.927819199f, 2.082380801f); // Rango para 50
-            tableFiller50.SetFloatArray(tiempoFinal);
-        }
-        if (checkWhereCensorIs40.GetIsHere())
-        {
-            DistanciaGrafica = 40;
-            float tiempoFinal = Random.Range(1.782462107f, 1.850937893f); // Rango para 40
-            tableFiller40.SetFloatArray(tiempoFinal);
-        }
-        if (checkWhereCensorIs30.GetIsHere())
-        {
-            DistanciaGrafica = 30;
-            float tiempoFinal = Random.Range(1.581674422f, 1.669925578f); // Rango para 30
-            tableFiller30.SetFloatArray(tiempoFinal);
-        }
-        if (checkWhereCensorIs20.GetIsHere())
-        {
-            DistanciaGrafica = 20;
-            float tiempoFinal = Random.Range(1.403589112f, 1.429010888f); // Rango para 20
-            tableFiller20.SetFloatArray(tiempoFinal);
+            tableFiller50.SetFloatArray(time);
         }
         if (checkWhereCensorIs10.GetIsHere())
         {
             DistanciaGrafica = 10;
-            float tiempoFinal = Random.Range(1.127114873f, 1.195085127f); // Rango para 10
-            tableFiller10.SetFloatArray(tiempoFinal);
+            tableFiller10.SetFloatArray(time);
+        }
+        if (checkWhereCensorIs20.GetIsHere())
+        {
+            DistanciaGrafica = 20;
+            tableFiller20.SetFloatArray(time);
+        }
+        if (checkWhereCensorIs30.GetIsHere())
+        {
+            DistanciaGrafica = 30;
+            tableFiller30.SetFloatArray(time);
+        }
+        if (checkWhereCensorIs40.GetIsHere())
+        {
+            DistanciaGrafica = 40;
+            tableFiller40.SetFloatArray(time);
         }
     }
 
@@ -114,4 +110,3 @@ public class TimeSecondsCar : MonoBehaviour
 
     public int GetDistanciaGrafica() => DistanciaGrafica;
 }
-
